@@ -39,11 +39,8 @@ class Solution:
 
         #TODO: Write code below to return a float with the solution to the prompt.
         meters = battcap/250
-        max = 0
-        for i in range(meters-1):
-            if(i*(meters-i) > max):
-                max = i*(meters-i)
-        return max/2
+        meters =((meters*meters)/4) - 2*((meters/4)*(meters/4))
+        return meters
 
 def main():
     battcap = int(input())
